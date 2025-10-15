@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programación Web Plan de Asignatura</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header, nav, main, section, article, aside, footer {
+      padding: 15px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    h1 { text-align: center; margin: 0; }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    nav li { position: relative; }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background: #001a33;
+      padding: 8px 12px;
+      border-radius: 5px;
+      display: block;
+      white-space: nowrap;
+    }
+    nav a:hover { background: #ffcc00; color: #000; }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      background: #001a33;
+      margin: 0;
+      padding: 6px;
+      border-radius: 6px;
+      min-width: 170px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 1001;
+    }
+    nav ul ul li { margin: 0; }
+    nav ul ul a { padding:8px 10px; font-weight: normal; text-align:left; }
+    nav ul li:hover > ul { display: block; }
+    nav a:focus + ul, nav a:active + ul { display: block; }
+
+    main { display:flex; gap:15px; margin-bottom: 20px; }
+    .contenido { flex:3; display:flex; flex-direction:column; gap:15px; }
+    section { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 0 6px rgba(0,0,0,0.06); }
+    article { background:#e6f0ff; padding:10px; border-radius:5px; margin-bottom:12px; }
+    figure { margin:0; text-align:center; }
+    figcaption { font-size:0.9em; color:#555; }
+
+    aside {
+      flex: 1;
+      background: #d9f2d9;
+      border-radius: 8px;
+      padding: 20px;
+      width: 320px;
+    }
+
+    #noticias { text-align: center; margin-bottom: 15px; }
+
+    aside ul { list-style: none; padding: 0; margin: 0; }
+    aside li { margin-bottom: 18px; text-align: left; }
+
+    .imgnoticia {
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+      display: block;
+      margin: 0 auto 8px auto;
+      border-radius: 6px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+
+    aside strong { font-size: 0.9em; color: #003366; }
+    aside em { font-size: 0.8em; color: #555; }
+    aside a { color: #003366; text-decoration: none; font-weight: bold; }
+    aside a:hover { color: #ff6600; }
+
+    footer {
+      background:#222;
+      color:#fff;
+      text-align:center;
+      padding:20px;
+      margin-top:10px;
+    }
+    footer a { color:#ffcc00; text-decoration:none; }
+
+    section, article { scroll-margin-top: 100px; }
+
+    img { max-width: 100%; height: auto; }
+
+    @media (max-width: 800px) {
+      main { flex-direction: column; }
+      aside { order: 99; width: 100%; }
+
+      nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      nav ul li { flex: 0 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Plan de Asignatura: Programación Web</h1>
+  <nav aria-label="Menú principal">
+    <ul>
+      <li><a href="#programa">Programa Educativo</a></li>
+      <li><a href="#cuatrimestre">Cuatrimestre</a></li>
+      <li>
+        <a href="#unidadI">Unidad I</a>
+        <ul>
+          <li><a href="#unidadII">Unidad II</a></li>
+          <li><a href="#unidadIII">Unidad III</a></li>
+          <li><a href="#unidadIV">Unidad IV</a></li>
+        </ul>
+      </li>
+      <li><a href="#multimedia">Multimedia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="contenido">
+
+    <section id="programa">
+      <h2>Programa Educativo</h2>
+      <article>
+        <h3>Propósito</h3>
+        <p>El alumno implementará sistemas empleando tecnologías web para extender la disponibilidad y alcances de los servicios de la organización.</p>
+      </article>
+      <figure>
+        <img src="Imagenes/upsin.jpg" alt="Estudiantes caminando en campus de la UPSIN">
+        <figcaption>Estudiantes de la Universidad Politécnica de Sinaloa (UPSIN).</figcaption>
+      </figure>
+    </section>
+
+    <section id="cuatrimestre">
+      <h2>Cuatrimestre</h2>
+      <article>
+        <p><strong>Cuatrimestre:</strong> Séptimo<br>
+        <strong>Total de horas:</strong> 75<br>
+        <strong>Modalidad:</strong> Presencial</p>
+      </article>
+    </section>
+
+    <section id="unidadI">
+      <h2>Unidad I. Introducción a los sistemas web</h2>
+      <article>
+        <h3>Temas de aprendizaje</h3>
+        <p>1. Introducción a la programación web<br>2. Configuración de servidores de desarrollo<br>3. Configuración de servidor de producción</p>
+      </article>
+    </section>
+
+    <section id="unidadII">
+      <h2>Unidad II. Programación del lado del cliente</h2>
+      <article>
+        <h3>Temas de aprendizaje</h3>
+        <p>1. Maquetación (HTML)<br>2. Hojas de estilo (CSS)<br>3. JavaScript</p>
+      </article>
+    </section>
+
+    <section id="unidadIII">
+      <h2>Unidad III. Programación del lado del servidor</h2>
+      <article>
+        <h3>Temas de aprendizaje</h3>
+        <p>1. Interfaz de programación de aplicaciones y programación de tres niveles<br>
+          2. Acceso a servicios<br>
+          3. Monitoreo y estadísticas del sistema web</p>
+      </article>
+    </section>
+
+    <section id="unidadIV">
+      <h2>Unidad IV. Autenticación de usuarios</h2>
+      <article>
+        <h3>Temas de aprendizaje</h3>
+        <p>1. Autentificación e interfaces seguras<br>
+          2. Manejo de sesiones<br>
+          3. Manejo de excepciones</p>
+      </article>
+    </section>
+
+    <section id="multimedia">
+      <h2>Material Multimedia</h2>
+      <article>
+        <figure>
+      
+      <div style="position: relative; width: 100%; padding-bottom: 56.25%; overflow: hidden; border-radius: 8px;">
+        <iframe
+          src="https://www.youtube.com/embed/cDNMe56I8LU"
+          style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <figcaption>Video: Conoce la carrera de Ingeniería en Tecnologías de la Información</figcaption>
+    </figure>
+  </article>
+</section>
+
+  </div>
+
+  <aside>
+    <h2 id="noticias">Noticias UPSIN</h2>
+    <ul>
+      <li>
+        <img src="imagenes/salud.jpg" alt="Salud mental UPSIN" class="imgnoticia">
+        <strong>Cuidar tu mente también es crecer</strong><br>
+        Conferencia sobre salud mental en la UPSIN junto al IMJU Mazatlán.<br>
+        <em>Oct 13, 2025</em><br>
+        <a href="https://upsin.edu.mx/conferencia-salud-mental-upsin-imju-2025/" target="_blank">Leer más</a>
+      </li>
+
+      <li>
+        <img src="imagenes/NANO.jpg" alt="Nanotecnología UPSIN" class="imgnoticia">
+        <strong>Estudiantes de Nanotecnología en el IX Seminario Regional</strong><br>
+        Alumnos de la UPSIN participaron en el evento de Materiales Avanzados.<br>
+        <em>Oct 10, 2025</em><br>
+        <a href="https://upsin.edu.mx/ix-seminario-regional-de-materiales-avanzados-upsin/" target="_blank">Leer más</a>
+      </li>
+    </ul>
+  </aside>
+</main>
+
+<footer id="contacto">
+  <p><strong>Universidad Politécnica de Sinaloa (UPSIN)</strong></p>
+  <p>Ingeniería en Tecnologías de la Información</p>
+  <p><strong>Materia:</strong> Programación Web<br>
+     <strong>Profesor:</strong> Roberto Antonio Martínez Thompson</p>
+  <p><strong>Correo de contacto:</strong> 
+     <a href="mailto:info@upsin.edu.mx">info@upsin.edu.mx</a></p>
+  <p>&copy; 2025 Universidad Politécnica de Sinaloa. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
